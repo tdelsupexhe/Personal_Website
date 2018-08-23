@@ -1,0 +1,530 @@
+/*************************************************************************************/
+/*VARIABLES***************************************************************************/
+/*************************************************************************************/
+:root {
+    --main-font-size: 2rem;
+    --main-webdev-color: #D9534F;
+    --main-formation-color: #D77B45;
+    --main-project-color: #5ABCB9;
+    --main-contact-color: #63E2C6;
+    --main-font-color: #fff;
+    --main-shadow-text: #fff;
+}
+
+/*************************************************************************************/
+/*GENERAL*****************************************************************************/
+/*************************************************************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--main-font-size);
+    line-height: 1.2;
+    font-family: Roboto, sans-serif;
+    color: var(--main-font-color);
+    background-color: inherit;
+}
+
+/*H1, H2, H3, etc*********************************************************************/
+h1 {
+    font-size: calc(var(--main-font-size) * 2);
+    word-spacing: -0.55rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+h1 span {
+    font-weight: 900;
+    font-style: normal;
+}
+
+h2{
+    font-size: calc(var(--main-font-size) * 2);
+    word-spacing: -0.55rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2 span {
+    font-weight: 900;
+    font-style: normal;
+}
+
+h3{
+    font-size: calc(var(--main-font-size));
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 2rem;
+}
+
+/*Liens*********************************************************************************/
+a {
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+
+.webdev-color a:hover {
+    color: var(--main-webdev-color);
+}
+.contact-color a:hover {
+    color: var(--main-project-color);
+}
+.formation-color a:hover{
+    color: var(--main-formation-color);
+}
+.project-color a:hover{
+    color: var(--main-project-color)
+}
+
+
+/*Classes générales********************************************************************/
+.back{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    z-index: 1;
+}
+
+.bcktransparent:hover{
+    background-color: rgba(3,3,3,.3);
+}
+
+.project-bckcolor{
+    background-color: var(--main-project-color);
+}
+.webdev-bckcolor{
+    background-color: var(--main-webdev-color);
+}
+.contact-bckcolor{
+    background-color: var(--main-contact-color);
+}
+.formation-bckcolor{
+    background-color: var(--main-formation-color);
+}
+
+.badge-list{
+    margin: 3rem 3rem 0 3rem;
+}
+.badge-red{
+    background-color: #d9534f;
+    color: inherit;
+}
+.badge-darkblue{
+    background-color: #337ab7;
+    color: inherit;
+}
+.badge-lightblue{
+    background-color: #5bc0de;
+    color: inherit;
+}
+.badge-green{
+    background-color: #5cb85c;
+    color: inherit;
+}
+.badge-yellow{
+    background-color: #f0ad4e;
+    color: inherit;
+}
+.badge-grey{
+    background-color: #777;
+    color: inherit;
+}
+.badge-orange{
+    background-color: #D77B45;
+    color: inherit;
+}
+
+/*Formulaire**************************************************************************/
+input, textarea, button{
+    margin: 0.5rem 0 3rem 0;
+    width: 100%;
+    font-size: var(--main-font-size);
+    line-height: 1.5;
+    padding: 0.5rem;
+    background: none;
+    color: var(--main-font-color);
+    border: none;
+}
+
+input, textarea, button[type="submit"]{
+    border-bottom: 3px solid var(--main-contact-color);
+}
+
+input:focus, textarea:focus{
+    background: rgba(0,0,0,.1);
+    color: inherit;
+    outline: none;
+    padding: 0.5rem;
+}
+
+textarea{
+    resize: none;
+    height: calc(var(--main-font-size)*7);
+}
+
+button[type="submit"]{
+    cursor:pointer;
+    width: calc(var(--main-font-size)*6);
+    text-transform: uppercase;
+    font-size: var(--main-font-size);
+}
+
+/*************************************************************************************/
+/*HOMEPAGE ***************************************************************************/
+/*************************************************************************************/
+
+.main-content{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 50vh;
+}
+
+/*Figure homepage*********************************************************************/
+.fig{
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+}
+
+.fig img{
+    min-height: 100%;
+    object-fit: cover;
+    max-width: none;
+    width: calc(100% + 50px);
+    opacity: .4;
+    transition: opacity .35s, transform .35s;
+    transform: scale(1.1);
+}
+
+.fig figcaption{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.figure-text{
+    height: 5rem;
+}
+
+.fig figcaption,
+.fig figcaption>a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+}
+
+figure p{
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+/*Figure homepage :hover***************************************************************/
+.fig:hover img,
+.fig:hover p {
+    opacity: 1;
+}
+
+.fig:hover img,
+.fig:hover h2,
+.fig:hover p {
+    transform: scale(1);
+}
+
+/*************************************************************************************/
+/*BACKGROUND DES PAGES****************************************************************/
+/*************************************************************************************/
+.layer-background{
+    position:relative;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer-background-webdev{
+    background: url('../img/layers/perso-min.jpg');
+    background-size: cover;
+}
+.layer-background-contact{
+    background: url('../img/layers/contact-min.jpg');
+    background-size: cover;
+}
+.layer-background-formation{
+    background: url('../img/layers/formation-min.jpg');
+    background-size: cover;
+}
+.layer-background-project{
+    background: url('../img/layers/projets-min.jpg');
+    background-size: cover;
+}
+
+
+.layer-color{
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layer-text{
+    position: relative;
+    max-width: 50rem;
+    margin-bottom: 3rem;
+}
+
+/*************************************************************************************/
+/*SOCIAL LOGOS ***********************************************************************/
+/*************************************************************************************/
+
+.social-logo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.infos-item{
+    position: relative;
+    cursor: help;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.infos-item:hover:after,
+.infos-item:focus:after {
+    content: attr(aria-label);
+    position: absolute;
+    top: -2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+    padding: 5px 14px;
+    background: inherit;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+#social-logo-webdev{
+    margin: 3rem 0 0 0;
+}
+
+#social-logo-webdev a:after{
+    background: var(--main-webdev-color);
+}
+
+#social-logo-contact a:after{
+    background: var(--main-contact-color);
+}
+
+/*************************************************************************************/
+/*REALISATIONS ***********************************************************************/
+/*************************************************************************************/
+.project-site {
+    display: grid!important;
+    grid-template-columns: 1fr;
+    margin: 3rem 0;
+    padding: 3rem;
+    background-color: rgba(3,3,3,.3);
+    color: inherit;
+    position: relative;
+}
+
+.project-titre-text{
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.img-project-site{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-project-site img{
+    width: 40rem;
+    height: 40rem;
+}
+
+.text-project-site{
+margin: 0 1rem;
+}
+
+.project-site p{
+    font-size: calc(var(--main-font-size)/1.25);
+    margin: 1rem 0;
+}
+
+.project-site a{
+    font-weight: 300;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-site a>span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*Fleches slick slider ***************************************************************/
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    width: 2.5rem;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.slick-next{
+    right: -2.5rem;
+}
+
+.slick-prev{
+    left: -2.5rem;
+}
+
+.slick-prev:hover, .slick-next:hover{
+    color: var(--main-project-color);
+}
+
+
+/*Effet lien github réalisation*******************************************************/
+.cl-effect-20 a {
+    position: relative;
+    display: block;
+    text-align: center;
+    outline: none;
+    background-color: inherit;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: var(--main-font-size);
+    -webkit-perspective: 800px;
+       -moz-perspective: 800px;
+            perspective: 800px;
+}
+
+.cl-effect-20 a:hover,
+.cl-effect-20 a:focus {
+    outline: none;
+}
+
+
+.cl-effect-20 a span {
+    position: relative;
+    display: block;
+    box-shadow: inset 0 5px var(--main-project-color);
+    -webkit-transition: background 0.6s;
+       -moz-transition: background 0.6s;
+            transition: background 0.6s;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+       -moz-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    text-transform: lowercase;
+    padding: 1rem;
+}
+
+.cl-effect-20 a span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 0 0.5rem;
+    width: 100%;
+    height: 60%;
+    background: #fff;
+    color: var(--main-project-color);
+    content: attr(data-hover);
+    -webkit-transform: rotateX(270deg);
+       -moz-transform: rotateX(270deg);
+            transform: rotateX(270deg);
+    -webkit-transition: -webkit-transform 0.6s;
+       -moz-transition: -moz-transform 0.6s;
+            transition: transform 0.6s;
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+            transform-origin: 0 0;
+    pointer-events: none;
+}
+
+.cl-effect-20 a:hover span,
+.cl-effect-20 a:focus span {
+    background: var(--main-project-color);
+}
+
+.cl-effect-20 a:hover span::before,
+.cl-effect-20 a:focus span::before {
+    -webkit-transform: rotateX(10deg);
+       -moz-transform: rotateX(10deg);
+            transform: rotateX(10deg);
+}
+
+/*************************************************************************************/
+/*FORMULAIRE DE CONTACT***************************************************************/
+/*************************************************************************************/
+
+.form-contact{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: var(--main-font-size);
+}
+
+.form-email, .form-msg{
+    grid-column: 1/3;
+}
+
+/*************************************************************************************/
+/*RESPONSIVE**************************************************************************/
+/*************************************************************************************/
+
+@media all and (min-device-width: 500px) {
+    :root {
+        --main-font-size: 1.4rem;
+    }
+
+    h3{
+        margin: 0;
+    }
+
+    .main-content{
+        grid-template-columns: repeat(2, 50vw);
+    }
+
+    .project-site {
+        grid-template-columns: 1fr 4fr;
+        padding: 1rem;
+        margin: 1rem 0 0 0;
+        background: none;
+    }
+
+    .img-project-site img{
+        width: 10rem;
+        height: 10rem;
+    }
+
+
+}
