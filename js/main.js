@@ -1,18 +1,23 @@
 // Transition de la page d'accueil vers les pages secondaires
-$('.layer-text').hide();
+//on cache les textes, formulaire de contact, logos réseaux sociaux, liste de badges
 $('.badge-list').hide();
 $('.form-contact').hide();
 $('.social-logo').hide();
-
-$('.layer-text').slideDown(1000, function () {
-    $('#social-logo-webdev').slideDown(500);
+$('.layer-text').hide()
+    //on affiche les textes
+    .fadeIn(1500, function () {
+    //ensuite on affiche les logos des réseaux sociaux
+    $('#social-logo-webdev').toggle( 'slide');
+    //puis la liste des badges
     $('.badge-list').toggle( 'slide');
+    //et le formulaire de contact
     $('.form-contact').slideDown(1500, function () {
-        $('#social-logo-contact').slideDown(500);
+        //après le formulaire on affiche les réseaux sociaux
+        $('#social-logo-contact').toggle( 'slide');
     });
 });
 
-//Bouton envoyer de la page contact
+//Bouton envoyer de la page contact (switch entre le texte 'envoyer' et l'enveloppe)
 $('#submit')
     .on('mouseover', function(){
         $('#submit').html('<i class="far fa-envelope"></i>');
@@ -26,6 +31,6 @@ $('#submit')
 $('.slick-slider').slick({
     'setting-name': 'setting-value'
 });
-
+//changer les flèches pour le slider
 $('.slick-prev').html('<i class="fas fa-chevron-left fa-2x"></i>');
 $('.slick-next').html('<i class="fas fa-chevron-right fa-2x"></i>');

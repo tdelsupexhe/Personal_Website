@@ -89,9 +89,9 @@ a {
     z-index: 1;
 }
 
-.bcktransparent:hover{
+/*.bcktransparent:hover{
     background-color: rgba(3,3,3,.3);
-}
+}*/
 
 .project-bckcolor{
     background-color: var(--main-project-color);
@@ -335,7 +335,7 @@ figure p{
     grid-template-columns: 1fr;
     margin: 3rem 0;
     padding: 3rem;
-    background-color: rgba(3,3,3,.3);
+    /*background-color: rgba(3,3,3,.3);*/
     color: inherit;
     position: relative;
 }
@@ -363,7 +363,7 @@ margin: 0 1rem;
 }
 
 .project-site p{
-    font-size: calc(var(--main-font-size)/1.25);
+    font-size: var(--main-font-size);
     margin: 1rem 0;
 }
 
@@ -386,19 +386,22 @@ margin: 0 1rem;
 .slick-arrow{
     position: absolute;
     top: 50%;
-    width: 2.5rem;
+    width: 10rem;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
     cursor: pointer;
+    height: 100%;
+    z-index: 1;
+    outline: none;
 }
 
 .slick-next{
-    right: -2.5rem;
+    right: -5rem;
 }
 
 .slick-prev{
-    left: -2.5rem;
+    left: -5rem;
 }
 
 .slick-prev:hover, .slick-next:hover{
@@ -503,7 +506,7 @@ margin: 0 1rem;
 
 @media all and (min-device-width: 500px) {
     :root {
-        --main-font-size: 1.4rem;
+        --main-font-size: 1.2rem;
     }
 
     h3{
@@ -521,9 +524,17 @@ margin: 0 1rem;
         background: none;
     }
 
+    .project-site p{
+        font-size: calc(var(--main-font-size)/1.25);
+    }
+
     .img-project-site img{
         width: 10rem;
         height: 10rem;
+    }
+
+    .slick-arrow {
+        width: 6rem;
     }
 
 
