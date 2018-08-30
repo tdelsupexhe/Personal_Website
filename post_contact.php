@@ -17,22 +17,6 @@ $validator->check('email', 'email', 'Vous n\'avez pas entré un email valide');
 $validator->check('msg', 'required', 'Vous n\'avez pas entré votre message');
 $errors = $validator->errors();
 
-/*if(!array_key_exists('name', $_POST) || $_POST['name'] == ''){
-    $errors['name'] = "Vous n'avez pas entré votre nom";
-}
-if(!array_key_exists('firstname', $_POST) || $_POST['firstname'] == ''){
-    $errors['firstname'] = "Vous n'avez pas entré votre prénom";
-}
-if(!array_key_exists('email', $_POST) || $_POST['email'] == '' || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-    $errors['email'] = "Vous n'avez pas entré un email valide";
-}
-if(!array_key_exists('msg', $_POST) || $_POST['msg'] == ''){
-    $errors['msg'] = "Vous n'avez pas entré votre message";
-}*/
-
-/*session_start();*/
-
-
 if(!empty($errors)){
     $_SESSION['errors'] = $errors;
     $_SESSION['inputs'] = $_POST;

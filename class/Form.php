@@ -7,7 +7,6 @@
  */
 
 
-/* RAJOUTER LES REQUIRED */
 class Form
 {
     private $datas = [];
@@ -27,9 +26,9 @@ class Form
 
 
         if($type == 'textarea'){
-            $input = "<textarea id=\"$name\" name=\"$name\">$value</textarea>";
+            $input = "<textarea id=\"$name\" name=\"$name\" required>$value</textarea>";
         } else{
-            $input = "<input type=\"$type\" id=\"$name\" name=\"$name\" value=\"$value\">";
+            $input = "<input type=\"$type\" id=\"$name\" name=\"$name\" value=\"$value\" required>";
         }
 
 
