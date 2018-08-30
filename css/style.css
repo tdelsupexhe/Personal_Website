@@ -173,6 +173,41 @@ button[type="submit"]{
     font-size: var(--main-font-size);
 }
 
+.form-name, .form-firstname, .form-email, .form-msg{
+    position: relative;
+}
+
+.error-php{
+    color: inherit;
+    background-color: #d9534f;
+    padding: 0 .3rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+.success-php{
+    background-color: var(--main-contact-color);
+    padding: 1rem;
+    border-radius: .3rem;
+}
+
+
+label.error{
+    color: inherit;
+    background-color: #d9534f;
+    padding: 0 .3rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+input.error, textarea.error{
+    border: 1px dashed #d9534f;
+}
+
 /*************************************************************************************/
 /*HOMEPAGE ***************************************************************************/
 /*************************************************************************************/
@@ -537,5 +572,7 @@ margin: 0 1rem;
         width: 6rem;
     }
 
-
+    label.error, .error-php{
+        font-size: 1rem;
+    }
 }
