@@ -109,6 +109,10 @@ a {
 .badge-list{
     margin: 3rem 3rem 0 3rem;
 }
+.badge{
+    padding: 0.5rem;
+    line-height: 6rem;
+}
 .badge-red{
     background-color: #d9534f;
     color: inherit;
@@ -171,6 +175,13 @@ button[type="submit"]{
     width: calc(var(--main-font-size)*6);
     text-transform: uppercase;
     font-size: var(--main-font-size);
+    height: 3.3rem;
+}
+
+
+button[type="submit"]:hover{
+    border-left: 3px solid var(--main-contact-color);
+    border-right: 3px solid var(--main-contact-color);
 }
 
 .form-name, .form-firstname, .form-email, .form-msg{
@@ -191,6 +202,7 @@ button[type="submit"]{
     background-color: var(--main-contact-color);
     padding: 1rem;
     border-radius: .3rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -574,5 +586,9 @@ margin: 0 1rem;
 
     label.error, .error-php{
         font-size: 1rem;
+    }
+
+    .badge{
+        line-height: 3.2rem;
     }
 }

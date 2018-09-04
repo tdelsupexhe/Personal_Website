@@ -26,7 +26,8 @@
                         Votre email a bien été envoyé.
                     </div>
                 <?php endif; ?>
-
+                <?php
+                if(!array_key_exists('success', $_SESSION)): ?>
                 <form action="post_contact.php" method="post" class="form-contact" id="form-contact">
                     <div class="form-name">
                         <?php $form = new Form(isset($_SESSION['inputs']) ? $_SESSION['inputs'] : []);?>
@@ -59,6 +60,7 @@
                     </div>
 
                     <?= $form->buttonSubmit('Envoyer'); ?>
+                    <?php endif; ?>
                 </form>
                 <div class="social-logo infos contact-color" id="social-logo-contact">
                     <a href="https://www.linkedin.com/in/thomas-delsupexhe/" target="_blank" class="infos-item" aria-label="Linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
@@ -70,13 +72,11 @@
     </div>
 </div>
 <script src="js/jquery-3.3.1.min.js"></script>
-<!--<script src="js/main.js"></script>-->
+<script src="js/main.js"></script>
 <script src="js/jQueryValidate/jquery.validate.js"></script>
 <script src="js/jQueryValidate/localization/messages_fr.js"></script>
 <script src="js/jQueryValidate/additional-methods.js"></script>
-<!--
 <script src="js/verifFormContact.js"></script>
--->
 </body>
 </html>
 
