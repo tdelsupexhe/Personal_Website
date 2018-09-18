@@ -12,6 +12,16 @@
 </head>
 <body>
 <div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125142407-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125142407-1');
+    </script>
+    <meta name="viewport" content="width=device-width">
     <div class="back contact-color">
         <a href="index.html" class=""><i class="fas fa-chevron-left fa-2x"></i></a>
     </div>

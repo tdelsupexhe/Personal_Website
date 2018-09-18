@@ -30,7 +30,8 @@ $('.layer-text').hide()
 //Slick slider
 if($('#slick-slider').hasClass('slick-slider')){
     $('.slick-slider').slick({
-        'setting-name': 'setting-value'
+        adaptiveHeight: true
+       /* autoplay: true*/
     });
 }
 

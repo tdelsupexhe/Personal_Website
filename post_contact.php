@@ -23,9 +23,14 @@ if(!empty($errors)){
     header('Location:contact.php');
 } else {
     $_SESSION['success'] = 1;
+    $subject = 'Demande de contact de '.$_POST['firstname'].' '.$_POST['name'].'(thomasdelsupexhe.be)';
     $message = $_POST['msg'];
-    $headers = 'FROM: thomasdelsupexhe.be';
-    mail('tdelsupexhe@gmail.com', 'Formulaire de contact', $message, $headers);
+    $headers = array(
+        'From' => 'contact@thomasdelsupexhe.be',
+        'Reply-To' => $_POST['email'],
+        'X-Mailer' => 'PHP/' . phpversion()
+    );
+    mail('tdelsupexhe@gmail.com', $subject, $message, $headers);
     header('Location:contact.php');
 }
 
