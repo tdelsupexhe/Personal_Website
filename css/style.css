@@ -230,6 +230,37 @@ input.error, textarea.error{
     border: 1px dashed #d9534f;
 }
 
+/*menu-smart *************************************************************************/
+.menu-smart{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 1;
+}
+
+.menu-smart-fond{
+    background-color: #000;
+    opacity: .8;
+}
+
+.menu-smart-text{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-smart-text a{
+    position: relative;
+    margin: 0 auto;
+}
+
+/*menu-sidebar *************************************************************************/
+.side-menu{
+    display: none;
+}
+
 /*************************************************************************************/
 /*HOMEPAGE ***************************************************************************/
 /*************************************************************************************/
@@ -351,7 +382,8 @@ figure p{
 
 .social-logo{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 0;
 }
 
 .infos-item{
@@ -377,10 +409,6 @@ figure p{
     font-size: calc(var(--main-font-size)*.7);
 }
 
-#social-logo-webdev{
-    margin: 3rem 0 0 0;
-}
-
 #social-logo-webdev a:after{
     background: var(--main-webdev-color);
 }
@@ -398,7 +426,7 @@ figure p{
 
 .slick-slide img {
     display: block;
-    max-width: 100%;
+    max-width: 50%;
     padding: 2rem;
     margin: 0 auto;
 }
@@ -550,7 +578,7 @@ figure p{
 
     .layer-text{
         max-width: 80rem;
-        padding: 0 3rem;
+        padding: 0 10rem;
     }
 
     .main-content{
@@ -569,4 +597,75 @@ figure p{
     .badge{
         line-height: 3.2rem;
     }
+
+    .menu-smart-text, .menu-smart-fond{
+        display: none;
+    }
+
+    /*Menu sidebar*********************************************************************/
+    .side-menu{
+        display: block;
+        position: fixed;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 0;
+        height: calc(5rem * 4);
+        z-index: 1;
+    }
+
+    .side-menu-fond{
+        min-width: 7.6rem;
+        background-color: #000;
+        opacity: .8;
+        border-radius: .3rem;
+    }
+
+    .side-menu-text{
+        min-width: 5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        justify-content: space-between;
+    }
+
+    .align-icons{
+        align-items: center;
+    }
+
+    .menu-hover{
+        padding-left: 1rem;
+        z-index: 2;
+    }
+
+    .col5-fr{
+        display: grid;
+        grid-template-columns: 5rem 1fr;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col5-fr>i{
+        text-align: center;
+        z-index: 2;
+    }
+
+    .jauge{
+        height: 5rem;
+        position: relative;
+    }
+
+    .jauge-remplissage{
+        transition: all 0.3s linear 0s;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .jauge:hover .jauge-remplissage {
+        width: 100%;
+    }
+
 }

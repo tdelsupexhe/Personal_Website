@@ -4,14 +4,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Webdevelopper | Thomas Delsupexhe | Me Contacter</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-</head>
-<body>
-<div>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125142407-1"></script>
     <script>
@@ -22,6 +14,28 @@
         gtag('config', 'UA-125142407-1');
     </script>
     <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <title>Webdevelopper | Thomas Delsupexhe | Me Contacter</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <div class="menu-smart menu-smart-fond"></div>
+    <div class="menu-smart menu-smart-text">
+        <a href="webdev.html" aria-label="Webdeveloper"><i class="fas fa-user fa-2x"></i></a>
+        <a href="competences.html" aria-label="Mes Compétences"><i class="fas fa-graduation-cap fa-2x"></i></a>
+        <a href="realisations.html" aria-label="Mes Réalisations"><i class="fas fa-building fa-2x"></i></a>
+        <a href="contact.php" aria-label="Me Contacter"><i class="fas fa-envelope fa-2x"></i></a>
+    </div>
+    <div class="side-menu side-menu-fond"></div>
+    <div class="side-menu side-menu-text align-icons">
+        <a href="webdev.html" aria-label="Webdeveloper" class="col5-fr jauge"><i class="fas fa-user fa-2x"></i><span class="menu-hover">Webdeveloper</span><span class="jauge-remplissage webdev-bckcolor"></span></a>
+        <a href="competences.html" aria-label="Mes Compétences" class="col5-fr jauge"><i class="fas fa-graduation-cap fa-2x"></i><span class="menu-hover">Mes Compétences</span><span class="jauge-remplissage formation-bckcolor"></span></a>
+        <a href="realisations.html" aria-label="Mes Réalisations" class="col5-fr jauge"><i class="fas fa-building fa-2x"></i><span class="menu-hover">Mes Réalisations</span><span class="jauge-remplissage project-bckcolor"></span></a>
+        <a href="contact.php" aria-label="Me Contacter" class="col5-fr jauge"><i class="fas fa-envelope fa-2x"></i><span class="menu-hover">Me Contacter</span><span class="jauge-remplissage contact-bckcolor"></span></a>
+    </div>
     <div class="back contact-color">
         <a href="index.html" class=""><i class="fas fa-chevron-left fa-2x"></i></a>
     </div>
@@ -74,7 +88,7 @@
                 </form>
                 <div class="social-logo infos contact-color" id="social-logo-contact">
                     <a href="https://www.linkedin.com/in/thomas-delsupexhe/" target="_blank" class="infos-item" aria-label="Linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://twitter.com/ThomasDelsu" target="_blank" class="infos-item" aria-label="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
+                    <!--<a href="https://twitter.com/ThomasDelsu" target="_blank" class="infos-item" aria-label="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>-->
                     <a href="tel:+32498362259" class="infos-item" aria-label="+32 498 36 22 59"><i class="fas fa-phone-square fa-2x"></i></a>
                 </div>
             </div>

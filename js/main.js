@@ -38,3 +38,22 @@ if($('#slick-slider').hasClass('slick-slider')){
 //changer les flèches pour le slider
 $('.slick-prev').html('<i class="fas fa-chevron-left fa-2x"></i>');
 $('.slick-next').html('<i class="fas fa-chevron-right fa-2x"></i>');
+
+//menu sidebar
+$('.menu-hover').hide(500);
+
+$('.side-menu').hover(function(){
+    $('.side-menu-fond').animate({
+        width: "24rem"
+    }, 450);
+    $('.menu-hover').show(500);
+    $('.side-menu').removeClass('align-icons');
+    /*$('.side-menu-fond').css('width','24rem');*/
+}, function(){
+    $('.side-menu-fond').animate({
+        width: "7.6rem"
+    }, 500);
+    $('.menu-hover').hide(500);
+    $('.side-menu').addClass('align-icons');
+    // $('.side-menu-fond').css('width','7.6rem');
+    });
